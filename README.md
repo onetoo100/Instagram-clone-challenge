@@ -48,14 +48,14 @@ Aplicacion React - carpeta "Front"
 ```
 API
 $ git clone https://github.com/onetoo100/Instagram-clone-challenge.git
-$ cd Back
+$ cd Instagram-clone-challenge/Back
 $ npm i
 $ npm run dev
 $ variables de entorno: MONGODB=mongodb://[username[:password]@]host1[:port1][,host2[:port2],...[,hostN[:portN]]][/[database]][?options]
 
 Aplicacion ReactJS		
 $ git clone https://github.com/onetoo100/Instagram-clone-challenge.git
-$ cd Front
+$ cd Instagram-clone-challenge/Front
 $ npm i
 $ npm start
 $ variables de entorno: REACT_APP_BACKEND_URL=http://localhost:[:port]
