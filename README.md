@@ -7,7 +7,7 @@ Aplicación similar a instagram que permite crear y visualizar imagenes.
 3. [Instalacion](#Instalacion)
 4. [FAQs](#faqs)
 
-### Informacin general
+### Informacion general
 ***
 * Aplicación responsiva similar a instagram que permite la creación y visualización de imágenes y videos.
 * Al iniciarla por primera vez con una base de datos vacía, el sistema crea automáticamente una lista de 3 publicaciones que pueden ser visualizadas en forma vertical. Al hacer click en el logo de Instagram o en el icono "home", la página sube al inicio.
