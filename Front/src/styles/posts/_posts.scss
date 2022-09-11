@@ -1,0 +1,38 @@
+@use "../base" as base;
+
+.posts {
+  @include base.flex($space: 1rem, $center: false, $column: false);
+  margin: 1rem auto;
+
+  @include base.size992 {
+    padding: 0 90px;
+  }
+
+  &_card {
+    margin: 0 auto;
+
+    @include base.flex($space: 1rem, $center: true, $column: true);
+  }
+
+  &_card_list {
+    margin: 10px 0px 0px;
+
+    width: 240px;
+    transition: 0.3s ease;
+    @include base.size320 {
+      width: 320px;
+      transition: 0.3s ease;
+    }
+    @include base.size480 {
+      width: 470px;
+      transition: 0.3s ease;
+    }
+
+    height: auto;
+    border: 1px solid base.$border_color;
+
+    background-color: base.$white_background;
+    border-radius: 10px;
+    @include base.flex($space: 0rem, $center: true, $column: true);
+  }
+}

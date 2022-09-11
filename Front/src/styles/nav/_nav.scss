@@ -1,0 +1,131 @@
+@use "../base" as base;
+
+$background: rgb(239, 239, 239);
+
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.nav_container {
+  height: 6rem;
+  padding: 0 2rem;
+  background-color: base.$white_background;
+  border-bottom: 1px solid base.$border_color;
+
+  @include base.flex($space: 0, $center: true, $column: false);
+  justify-content: center;
+
+  @include base.size480 {
+    justify-content: space-around;
+  }
+  @include base.size768 {
+    justify-content: space-evenly;
+  }
+
+  &_logo {
+    @include base.flex($space: 0, $center: true, $column: false);
+
+    img {
+      height: 50px;
+      position: relative;
+    }
+    .icon {
+      width: 2rem;
+      height: 1.5rem;
+    }
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  &_search {
+    position: relative;
+
+    i {
+      opacity: 0;
+
+      @include base.size640 {
+        opacity: 0.5;
+        position: absolute;
+        top: 6px;
+        left: 5px;
+      }
+    }
+    input {
+      visibility: hidden;
+      transition: 0.3s ease;
+      width: 0;
+
+      @include base.size640 {
+        visibility: visible;
+        transition: 0.3s ease;
+        width: auto;
+        padding: 1rem 1rem 1rem 3.5rem;
+        text-align: left;
+        border: none;
+        border-radius: 8px;
+        outline: none;
+        background-color: $background;
+        font-size: 1.3rem;
+      }
+      @include base.size768 {
+        width: 27rem;
+      }
+    }
+    .icon {
+      width: 1rem;
+      height: 1.5rem;
+
+      @include base.size320 {
+        width: 2rem;
+        height: 2rem;
+      }
+    }
+  }
+
+  &_icons {
+    :nth-child(1),
+    :nth-child(2),
+    :nth-child(4),
+    :nth-child(5) {
+      display: none;
+    }
+    @include base.flex($space: 2rem, $center: true, $column: false);
+
+    transition: 0.3s ease;
+    justify-content: space-between;
+
+    @include base.size480 {
+      :nth-child(1),
+      :nth-child(2),
+      :nth-child(4),
+      :nth-child(5) {
+        display: block;
+      }
+    }
+
+    img {
+      height: 20px;
+      width: 20px;
+
+      @include base.size320 {
+        height: 24px;
+        width: 24px;
+      }
+    }
+    .profile_icon {
+      position: relative;
+      height: 30px;
+      width: 30px;
+      border-radius: 50%;
+      border: 1px solid black;
+    }
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}

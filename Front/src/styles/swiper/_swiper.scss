@@ -1,0 +1,79 @@
+@use "../base" as base;
+
+.swiperCard {
+  margin: 16px 0px 0px;
+  padding: 16px 0;
+
+  width: 240px;
+  transition: 0.3s ease;
+  @include base.size320 {
+    width: 320px;
+    transition: 0.3s ease;
+  }
+  @include base.size480 {
+    width: 470px;
+    transition: 0.3s ease;
+  }
+
+  height: 119px;
+  border: 1px solid base.$border_color;
+
+  background-color: base.$white_background;
+  border-radius: 10px;
+
+  &_stories {
+    width: 100%;
+    overflow: hidden;
+    padding: 2px;
+
+    &_profile {
+      @include base.flex($space: 0.7rem, $center: true, $column: true);
+
+      img {
+        width: 50px;
+        height: 50px;
+        @include base.size480 {
+          width: 60px;
+          height: 60px;
+        }
+
+        object-fit: cover;
+        border-radius: 50%;
+        border: 2px solid base.$white_background;
+        outline: 2px solid rgb(232, 92, 115);
+        image-orientation: flip;
+
+        &:hover {
+          cursor: pointer;
+        }
+      }
+
+      span {
+        font-size: 11px;
+        @include base.flex($space: 0, $center: true, $column: true);
+        width: 74px;
+        height: 16px;
+      }
+    }
+  }
+}
+
+.swiper {
+  overflow: unset !important;
+}
+.swiper-button-next,
+.swiper-button-prev {
+  background-image: url(../../../public/assets/arrow.svg);
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-position: center;
+  width: 24px !important;
+  top: 40% !important;
+}
+.swiper-button-prev {
+  transform: rotate(180deg);
+}
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  display: none;
+}

@@ -1,0 +1,153 @@
+@use "../base" as base;
+
+.suggestions {
+  display: none;
+
+  @include base.size992 {
+    display: block;
+    width: 320px;
+    height: 635px;
+    margin: 0px 0px 30px;
+    padding: 1rem;
+  }
+
+  &_header {
+    margin: 30px 0px 10px;
+    @include base.flex($space: 0rem, $center: true, $column: false);
+    justify-content: space-between;
+
+    &_image {
+      @include base.flex($space: 1.5rem, $center: true, $column: false);
+      justify-content: space-between;
+
+      :first-child {
+        @include base.flex($space: 1rem, $center: true, $column: false);
+      }
+
+      img {
+        width: 56px;
+        height: 56px;
+        object-fit: cover;
+        border-radius: 50%;
+        border: 1px solid base.$border_color;
+
+        &:hover {
+          cursor: pointer;
+        }
+      }
+
+      &_text {
+        @include base.flex($space: 0.3rem, $center: false, $column: true);
+        font-size: 14px;
+        // color: base.$suggestion_text;
+        &:hover {
+          cursor: pointer;
+        }
+
+        span {
+          color: base.$suggestion_span;
+          cursor: default;
+        }
+      }
+    }
+
+    &_switch {
+      font-size: 12px;
+      font-weight: bold;
+      color: base.$suggestion_link;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+
+  &_title {
+    @include base.flex($space: 0, $center: false, $column: false);
+    justify-content: space-between;
+    height: 19px;
+    margin-bottom: 8px;
+    padding: 4px 0px;
+    font-weight: bold;
+
+    :first-child {
+      font-size: 14px;
+      color: base.$suggestion_span;
+    }
+    :last-child {
+      font-size: 12px;
+      color: base.$suggestion_text;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+
+  &_list {
+    height: 48px;
+    padding: 8px 0px 8px 10px;
+
+    @include base.flex($space: 0rem, $center: true, $column: false);
+    justify-content: space-between;
+
+    &_image {
+      @include base.flex($space: 1.5rem, $center: true, $column: false);
+      justify-content: space-between;
+      color: base.$suggestion_text;
+
+      img {
+        width: 32px;
+        height: 32px;
+        object-fit: cover;
+        border-radius: 50%;
+        border: 1px solid base.$post_comment;
+
+        &:hover {
+          cursor: pointer;
+        }
+      }
+
+      &_text {
+        @include base.flex($space: 0.3rem, $center: false, $column: true);
+        font-size: 14px;
+        &:hover {
+          cursor: pointer;
+        }
+
+        span {
+          font-size: 12px;
+          color: base.$suggestion_span;
+          cursor: default;
+        }
+      }
+    }
+
+    &_switch {
+      font-size: 12px;
+      font-weight: bold;
+      color: base.$suggestion_link;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+
+  &_footer {
+    font-size: 12px;
+    color: base.$span_icon;
+
+    &_terms {
+      height: 36px;
+      width: 100%;
+      margin: 30px 0px 3px;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+
+    &_meta {
+      height: 16px;
+      width: 100%;
+    }
+  }
+}

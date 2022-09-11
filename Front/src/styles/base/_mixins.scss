@@ -1,0 +1,76 @@
+@use "variables" as v;
+
+/** Media Queries **/
+@mixin size320 {
+  @media (min-width: v.$size320) {
+    @content;
+  }
+}
+
+@mixin size480 {
+  @media (min-width: v.$size480) {
+    @content;
+  }
+}
+
+@mixin size640 {
+  @media (min-width: v.$size640) {
+    @content;
+  }
+}
+
+@mixin size768 {
+  @media (min-width: v.$size768) {
+    @content;
+  }
+}
+
+@mixin size992 {
+  @media (min-width: v.$size992) {
+    @content;
+  }
+}
+
+@mixin size1024 {
+  @media (min-width: v.$size1024) {
+    @content;
+  }
+}
+
+@mixin button($color, $text) {
+  background-color: $color;
+  font-size: 14px;
+  padding: 8px 9px;
+  border-radius: 5px;
+  font-weight: 700;
+  display: block;
+  width: 160px;
+  height: 30px;
+  text-align: center;
+  color: $text;
+  text-decoration: none;
+  border: none;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+@mixin grid($columns, $space) {
+  display: grid;
+  gap: $space;
+  grid-template-columns: repeat($columns, 1fr);
+}
+
+@mixin flex($space, $center: false, $column: false) {
+  display: flex;
+  @if $column {
+    flex-direction: column;
+  } @else {
+    flex-direction: row;
+  }
+  @if $center {
+    align-items: center;
+  }
+  gap: $space;
+}

@@ -1,0 +1,210 @@
+@use "../base" as base;
+
+.drag_new {
+  height: auto;
+  transition: 0.3s ease;
+
+  @include base.size768 {
+    width: 756px;
+  }
+
+  &_header {
+    @include base.flex($space: 0, $center: true, $column: false);
+    justify-content: space-between;
+    height: 43px;
+    padding: 1.3rem;
+    font-size: 16px;
+    font-weight: 500;
+    color: base.$span;
+    border-bottom: 1px solid base.$border_color;
+
+    &_icon {
+      width: 24px;
+      height: 24px;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+
+    &_cancel {
+      font-size: 14px;
+      font-weight: 300;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+
+    button {
+      color: rgb(0, 149, 247);
+      font-size: 14px;
+      outline: none;
+      border: none;
+      background-color: transparent;
+      font-weight: 500;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+
+  &_main {
+    @include base.flex($space: 0, $center: false, $column: true);
+    width: 100%;
+
+    @include base.size768 {
+      @include base.flex($space: 0, $center: false, $column: false);
+    }
+
+    .picture {
+      @include base.flex($space: 0, $center: true, $column: true);
+      width: 100%;
+      max-height: 200px;
+      @include base.size480 {
+        max-height: 300px;
+      }
+      @include base.size768 {
+        width: 50%;
+        margin: auto 0;
+        max-height: 450px;
+      }
+
+      img {
+        object-fit: cover;
+        max-width: 100%;
+        max-height: 200px;
+        @include base.size480 {
+          max-height: 300px;
+        }
+        @include base.size768 {
+          width: 100%;
+          max-height: 450px;
+        }
+      }
+      video {
+        object-fit: cover;
+        max-width: 100%;
+        max-height: 200px;
+        @include base.size480 {
+          max-height: 300px;
+        }
+        @include base.size768 {
+          width: 100%;
+          max-height: 450px;
+        }
+      }
+    }
+
+    .details {
+      width: 100%;
+      height: auto;
+      // background-color: cornflowerblue;
+      @include base.size768 {
+        width: 50%;
+      }
+
+      &_info {
+        @include base.flex($space: 1rem, $center: false, $column: true);
+        padding: 1rem;
+        border-bottom: 1px solid rgb(219, 219, 219);
+
+        @include base.size768 {
+          height: 70%;
+          // background-color: red;
+        }
+
+        &_title {
+          // background-color: green;
+          height: 10%;
+
+          div {
+            @include base.flex($space: 1rem, $center: true, $column: false);
+          }
+
+          @include base.flex($space: 1rem, $center: true, $column: false);
+          img {
+            position: relative;
+            height: 28px;
+            width: 28px;
+            border-radius: 50%;
+            border: 1px solid black;
+            object-fit: cover;
+          }
+
+          span {
+            font-size: 14px;
+            font-weight: 500;
+          }
+        }
+
+        &_text {
+          // background-color: violet;
+          height: 90%;
+          textarea {
+            width: 100%;
+            @include base.size768 {
+              height: 85%;
+            }
+
+            border: none;
+            outline: none;
+            resize: none;
+          }
+
+          &_icons {
+            @include base.flex($space: 0, $center: true, $column: false);
+            justify-content: space-between;
+
+            img {
+              height: 20px;
+              width: 20px;
+            }
+            span {
+              font-size: 12px;
+              color: base.$span_icon;
+            }
+          }
+        }
+      }
+
+      &_options {
+        @include base.size768 {
+          height: 30%;
+          // background-color: rgb(112, 101, 101);
+        }
+
+        &_location {
+          height: 33%;
+          // background-color: brown;
+
+          @include base.flex($space: 0, $center: true, $column: false);
+          justify-content: space-between;
+          padding: 1rem;
+          border-bottom: 1px solid rgb(219, 219, 219);
+
+          img {
+            width: 16px;
+            height: 16px;
+          }
+          span {
+            font-size: 16px;
+            color: base.$span_icon;
+          }
+
+          &--copy {
+            @extend .details_options_location !optional;
+          }
+          &--copy--last {
+            @extend .details_options_location !optional;
+            border-bottom: none;
+            // @include base.size768 {
+            //   border-bottom: 1px solid rgb(219, 219, 219);
+            // }
+          }
+        }
+      }
+    }
+  }
+}

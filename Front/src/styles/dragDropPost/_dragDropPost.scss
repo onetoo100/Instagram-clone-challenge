@@ -1,0 +1,81 @@
+@use "../base" as base;
+
+.drag {
+  height: 343px;
+  width: 230px;
+  transition: 0.3s ease;
+
+  @include base.size320 {
+    width: 300px;
+    transition: 0.3s ease;
+  }
+  @include base.size480 {
+    height: 440px;
+    width: 397px;
+    transition: 0.3s ease;
+  }
+  @include base.size640 {
+    height: 460px;
+    width: 416px;
+    transition: 0.3s ease;
+  }
+
+  // copy all styles from drag model to use in another file
+  &_new {
+    @extend .drag !optional;
+  }
+  &_edit {
+    @extend .drag !optional;
+  }
+
+  background-color: base.$white_background;
+  border-radius: 10px;
+
+  &_header {
+    @include base.flex($space: 0, $center: true, $column: true);
+    height: 43px;
+    padding: 1.3rem;
+    font-size: 16px;
+    font-weight: 500;
+    color: base.$span;
+    border-bottom: 1px solid base.$border_color;
+  }
+
+  &_main {
+    width: 100%;
+    height: 300px;
+    @include base.size480 {
+      height: 397px;
+    }
+    @include base.size640 {
+      height: 417px;
+    }
+
+    @include base.flex($space: 1rem, $center: true, $column: true);
+    justify-content: center;
+
+    img {
+      width: 120px;
+      height: 90px;
+    }
+
+    span {
+      font-size: 14px;
+      font-weight: 300;
+      color: base.$span;
+
+      @include base.size480 {
+        font-size: 22px;
+      }
+    }
+
+    button {
+      @include base.button(
+        $color: rgb(0, 149, 246),
+        $text: base.$white_background
+      );
+      font-weight: 500;
+      margin-top: 1rem;
+    }
+  }
+}

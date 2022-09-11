@@ -1,0 +1,22 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
+// Fuentes
+$main_font: "Roboto", sans-serif;
+
+// Tamaño de Media Queries
+$size240: 240px;
+$size320: 320px;
+$size480: 480px;
+$size640: 640px;
+$size768: 768px;
+$size992: 992px;
+$size1024: 1024px;
+
+// Colors
+$border_color: rgba(219, 219, 219, 1);
+$white_background: rgb(255, 255, 255);
+$span: rgb(83, 83, 83);
+$span_icon: #c7c7c7;
+$post_comment: #bbb;
+$suggestion_text: rgb(239, 239, 239);
+$suggestion_span: rgb(142, 142, 142);
+$suggestion_link: rgb(85, 183, 247);
