@@ -50,6 +50,7 @@ API
 $ git clone https://github.com/onetoo100/Instagram-clone-challenge.git
 $ cd Instagram-clone-challenge/Back
 $ npm i
+$ create .env file and add environment variable MONGODB=
 $ npm run dev
 $ variables de entorno: MONGODB=mongodb://[username[:password]@]host1[:port1][,host2[:port2],...[,hostN[:portN]]][/[database]][?options]
 
@@ -57,6 +58,7 @@ Aplicacion ReactJS
 $ git clone https://github.com/onetoo100/Instagram-clone-challenge.git
 $ cd Instagram-clone-challenge/Front
 $ npm i
+$ create .env file and add environment variable REACT_APP_BACKEND_URL=
 $ npm start
 $ variables de entorno: REACT_APP_BACKEND_URL=http://localhost:[:port]
 ```
