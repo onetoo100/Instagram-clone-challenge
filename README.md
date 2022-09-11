@@ -54,7 +54,7 @@ $ create .env file and add environment variable MONGODB=
 $ create /public/uploads/
 $ create /public/upload-videos/
 $ npm run dev
-$ variables de entorno: MONGODB=mongodb://[username[:password]@]host1[:port1][,host2[:port2],...[,hostN[:portN]]][/[database]][?options]
+$ Environment Variables: MONGODB=mongodb://[username[:password]@]host1[:port1][,host2[:port2],...[,hostN[:portN]]][/[database]][?options]
 
 Aplicacion ReactJS		
 $ git clone https://github.com/onetoo100/Instagram-clone-challenge.git
@@ -62,7 +62,7 @@ $ cd Instagram-clone-challenge/Front
 $ npm i
 $ create .env.development.local file and add environment variable REACT_APP_BACKEND_URL=
 $ npm start
-$ variables de entorno: REACT_APP_BACKEND_URL=http://localhost:[:port]
+$ Environment Variables: REACT_APP_BACKEND_URL=http://localhost:[:port]
 ```
 ### FAQs
 ***
