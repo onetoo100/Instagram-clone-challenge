@@ -51,6 +51,8 @@ $ git clone https://github.com/onetoo100/Instagram-clone-challenge.git
 $ cd Instagram-clone-challenge/Back
 $ npm i
 $ create .env file and add environment variable MONGODB=
+$ create /public/uploads/
+$ create /public/upload-videos/
 $ npm run dev
 $ variables de entorno: MONGODB=mongodb://[username[:password]@]host1[:port1][,host2[:port2],...[,hostN[:portN]]][/[database]][?options]
 
