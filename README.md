@@ -7,7 +7,7 @@ Aplicación similar a instagram que permite crear y visualizar imagenes.
 3. [Instalacion](#Instalacion)
 4. [FAQs](#faqs)
 
-### Información general
+### Informacion general
 ***
 * Aplicación responsiva similar a instagram que permite la creación y visualización de imágenes y videos.
 * Al iniciarla por primera vez con una base de datos vacía, el sistema crea automáticamente una lista de 3 publicaciones que pueden ser visualizadas en forma vertical. Al hacer click en el logo de Instagram o en el icono "home", la página sube al inicio.
@@ -48,15 +48,19 @@ Aplicacion React - carpeta "Front"
 ```
 API
 $ git clone https://github.com/onetoo100/Instagram-clone-challenge.git
-$ cd Back
+$ cd Instagram-clone-challenge/Back
 $ npm i
+$ create .env file and add environment variable MONGODB=
+$ create /public/uploads/
+$ create /public/upload-videos/
 $ npm run dev
 $ variables de entorno: MONGODB=mongodb://[username[:password]@]host1[:port1][,host2[:port2],...[,hostN[:portN]]][/[database]][?options]
 
 Aplicacion ReactJS		
 $ git clone https://github.com/onetoo100/Instagram-clone-challenge.git
-$ cd Front
+$ cd Instagram-clone-challenge/Front
 $ npm i
+$ create .env.development.local file and add environment variable REACT_APP_BACKEND_URL=
 $ npm start
 $ variables de entorno: REACT_APP_BACKEND_URL=http://localhost:[:port]
 ```
