@@ -6,7 +6,7 @@ import {
   POST_ERROR,
 } from "../types";
 
-export default (state, action) => {
+const publicationReducer = (state, action) => {
   switch (action.type) {
     case GET_POSTS:
       return { ...state, posts: action.payload };
@@ -23,5 +23,8 @@ export default (state, action) => {
       };
     case POST_ERROR:
       return { ...state, error: action.payload };
+    default:
+      break;
   }
 };
+export default publicationReducer;
