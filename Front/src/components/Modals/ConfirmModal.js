@@ -1,8 +1,12 @@
-import React from "react";
+import React, { useEffect } from "react";
 import UseModal from "../../hooks/UseModal";
 import UseLoading from "../../hooks/UseLoading";
+import { blockScroll } from "../../helpers/helper";
 
 const ConfirmModal = ({ loading, show = true }) => {
+  useEffect(() => {
+    blockScroll(show);
+  }, [show]);
   return (
     <UseModal show={show}>
       <div className="drag" onClick={(e) => e.stopPropagation()}>

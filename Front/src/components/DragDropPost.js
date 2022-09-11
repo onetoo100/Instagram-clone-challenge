@@ -1,26 +1,14 @@
 import React, { useEffect } from "react";
 import DropImage from "./DropImage";
 import UseModal from "../hooks/UseModal";
+import { blockScroll } from "../helpers/helper";
 
 import { AiOutlineClose } from "react-icons/ai";
 
 const DragDropPost = ({ close, show = true }) => {
-  // useEffect(() => {
-  //   const keyDownHandler = (e) => {
-  //     // detect the esc or delete click for close modal
-  //     const _close = e.key === "Escape" || e.key === "Delete" ? close() : null;
-  //     // if (e.key === "Escape" || e.key === "Delete") {
-  //     //   close();
-  //     // }
-  //   };
-
-  //   document.addEventListener("keydown", keyDownHandler);
-
-  //   return () => {
-  //     document.removeEventListener("keydown", keyDownHandler);
-  //   };
-  //   // eslint-disable-next-line
-  // }, []);
+  useEffect(() => {
+    blockScroll(show);
+  }, [show]);
 
   return (
     <UseModal show={show}>

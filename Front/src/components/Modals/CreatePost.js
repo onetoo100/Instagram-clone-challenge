@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 
 import publicationContext from "../../contexts/publicationContext";
 
@@ -7,6 +7,7 @@ import UseModal from "../../hooks/UseModal";
 import CreatePostHeader from "./CreatePostHeader";
 import CreatePostImage from "./CreatePostImage";
 import CreatePostDetails from "./CreatePostDetails";
+import { blockScroll } from "../../helpers/helper";
 
 const CreatePost = ({ close, show = true, loading }) => {
   const { currentPost, updateCurrentPost, createPost, updatePost } =
@@ -18,6 +19,10 @@ const CreatePost = ({ close, show = true, loading }) => {
     texto: "",
     isEdit: false,
   };
+
+  useEffect(() => {
+    blockScroll(show);
+  }, [show]);
 
   const handleSubmit = async (e) => {
     e.preventDefault();

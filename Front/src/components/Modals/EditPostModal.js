@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useEffect } from "react";
 import UseModal from "../../hooks/UseModal";
+import { blockScroll } from "../../helpers/helper";
 
 import { AiOutlineClose } from "react-icons/ai";
 
@@ -15,6 +16,10 @@ const EditPostModal = ({ editPost, close, show = true }) => {
     "Embed",
     "Cancel",
   ];
+
+  useEffect(() => {
+    blockScroll(show);
+  }, [show]);
 
   return (
     <UseModal show={show}>
