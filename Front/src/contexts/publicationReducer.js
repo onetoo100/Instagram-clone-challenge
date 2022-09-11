@@ -23,7 +23,5 @@ export default (state, action) => {
       };
     case POST_ERROR:
       return { ...state, error: action.payload };
-    default:
-      break;
   }
 };

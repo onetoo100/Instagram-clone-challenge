@@ -110,6 +110,8 @@
       &_text {
         @include base.flex($space: 0.3rem, $center: false, $column: true);
         font-size: 14px;
+        color: black;
+
         &:hover {
           cursor: pointer;
         }
