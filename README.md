@@ -58,7 +58,7 @@ Aplicacion ReactJS
 $ git clone https://github.com/onetoo100/Instagram-clone-challenge.git
 $ cd Instagram-clone-challenge/Front
 $ npm i
-$ create .env file and add environment variable REACT_APP_BACKEND_URL=
+$ create .env.development.local file and add environment variable REACT_APP_BACKEND_URL=
 $ npm start
 $ variables de entorno: REACT_APP_BACKEND_URL=http://localhost:[:port]
 ```
