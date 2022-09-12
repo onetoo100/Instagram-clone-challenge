@@ -25,7 +25,7 @@ https://user-images.githubusercontent.com/81515650/189505626-6d469a27-94a6-4eba-
 ***
 ### Tecnologias
 ***
-API - carpeta "Back"
+Server - carpeta "Back"
 * Node js
 * Express 	- manejo de peticiones
 * Cors 		- permite que nuestro dominio reciba solicitudes de otros dominios.
@@ -46,7 +46,7 @@ Aplicacion React - carpeta "Front"
 ### Instalacion
 ***
 ```
-API
+Server
 $ git clone https://github.com/onetoo100/Instagram-clone-challenge.git
 $ cd Instagram-clone-challenge/Back
 $ npm i
@@ -56,7 +56,7 @@ $ create /public/upload-videos/
 $ npm run dev
 $ Environment Variables: MONGODB=mongodb://[username[:password]@]host1[:port1][,host2[:port2],...[,hostN[:portN]]][/[database]][?options]
 
-Aplicacion ReactJS		
+Aplicacion Web		
 $ git clone https://github.com/onetoo100/Instagram-clone-challenge.git
 $ cd Instagram-clone-challenge/Front
 $ npm i
