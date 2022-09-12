@@ -33,7 +33,7 @@ Server - carpeta "Back"
 * Mongoose 	- para consultas en el banco de datos en Mongo.
 * Multer 	- para el manejo de los archivos que son enviados al servidor.
 ***
-Aplicacion React - carpeta "Front"
+Web - carpeta "Front"
 ***
 * React JS
 * Axios			- Para las llamadas a nuestra API.
